@@ -6,7 +6,13 @@
  * @return {number} The factorial of n
  */
 export function factorial(n) {
-  // Write your code here
+  if (!Number.isInteger(n) || n < 0) {
+    throw new Error();
+  }
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
 }
 
 /**
