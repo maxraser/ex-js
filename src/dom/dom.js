@@ -8,8 +8,8 @@
  * You need to change the color of the html element with the id "change-my-color"
  */
 export function getElementFromDomAndChangeColorToRed() {
-  const p=document.getElementById("change-my-color")
-  p.style.color="red"
+  const p = document.getElementById("change-my-color");
+  p.style.color = "red";
 }
 
 /**
@@ -17,7 +17,14 @@ export function getElementFromDomAndChangeColorToRed() {
  * The first paragraph must contain "Bonjour", the second "Toto".
  */
 export function addElementsInDOM() {
-  // Write your code here
+  const div = document.getElementById("add-your-elements-in-this-element");
+  const p1 = document.createElement("p");
+  p1.textContent = "Bonjour";
+  div.appendChild(p1);
+
+  const p2 = document.createElement("p");
+  p2.textContent = "Toto";
+  div.appendChild(p2);
 }
 
 /**
