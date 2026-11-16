@@ -33,5 +33,15 @@ export function isBiggerThan2(n) {
  * @return {boolean} true if n is a multiple of m
  */
 export function isMult(n, m) {
-  // Write your code here
+  if (n % m === 0) {
+    return true;
+  }
+  if (isNaN(n) || isNaN(m)) {
+    throw new Error();
+  }
+  if (typeof m !== "number" || typeof n !== "number") {
+    throw new Error();
+  } else {
+    return false;
+  }
 }
