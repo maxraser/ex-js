@@ -45,5 +45,15 @@ export function computeAverage(grades) {
  * @return {number} rounded average to 1 decimal
  */
 export function roundedAverage(grades) {
-  // Write your code here
+  if (
+    !Array.isArray(grades) ||
+    grades.some((g) => isNaN(g) || typeof g !== "number")
+  ) {
+    throw new Error();
+  }
+  let sum = 0;
+  for (let i = 0; i < grades.length; i++) {
+    sum = sum + grades[i];
+  }
+  return Math.round((sum / grades.length) * 10) / 10;
 }
