@@ -44,7 +44,10 @@ export function iteratesThroughObjectValuesAndProperties(object) {
  * @return {{younger: string, older: string}}
  */
 export function retrieveMaximumMinimumUserAges(users) {
-  // Write your code here
+  return {
+    younger: users.toSorted((a, b) => a.age - b.age)[0].name,
+    older: users.toSorted((a, b) => a.age - b.age).at(-1).name,
+  };
 }
 
 /**
