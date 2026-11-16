@@ -27,5 +27,5 @@ export function replaceElementsInArrayAtAGivenPlace(
   index,
   ...newElements
 ) {
-  // Write your code here
+  return array.toSpliced(index, newElements.length, ...newElements);
 }
