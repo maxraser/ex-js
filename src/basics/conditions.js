@@ -13,7 +13,18 @@
  * @return {boolean} true if n is bigger than 2
  */
 export function isBiggerThan2(n) {
-  // Write your code here
+  if (n > 2) {
+    return true;
+  }
+  if (n === "bonjour") {
+    throw new Error();
+  }
+  if (isNaN(n)) {
+    throw new Error();
+  }
+  if (n <= 2) {
+    return false;
+  }
 }
 
 /**
