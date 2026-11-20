@@ -6,8 +6,8 @@
 export function displayInputContentInAlertOnEnterKey() {
   const input = document.getElementById("write-some-text");
   input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || input.values !== "") {
-      alert(input.values);
+    if (event.key === "Enter" && input.values !== "") {
+      alert(input.value);
     }
   });
 }
@@ -36,5 +36,11 @@ export function addElementsInListOnEnterKey() {
  * Use the same list as the previous exercise. "#list"
  */
 export function removeElementsFromListWhenClicked() {
-  // Write your code here
+  const input = document.getElementById("list-input");
+  const list = document.getElementById("list");
+  list.addEventListener("click", (event) => {
+    if (event.target !== list) {
+      event.target.remove();
+    }
+  });
 }
